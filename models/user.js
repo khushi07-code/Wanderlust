@@ -15,4 +15,4 @@ const userSchema=new Schema({
 });
 userSchema.plugin(passportLocalMongoose);
 
-module.exports=wanderlust.model("User",userSchema);
+module.exports=wanderlustDB.model("User",userSchema);
