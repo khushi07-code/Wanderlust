@@ -1,7 +1,7 @@
 const mongoose=require("mongoose");
 const {Schema}=mongoose;
 const passportLocalMongoose = require("passport-local-mongoose");
-
+const wanderlustDB = mongoose.connection.useDb('wanderlust');
 
 const userSchema=new Schema({
     username:{
@@ -15,4 +15,4 @@ const userSchema=new Schema({
 });
 userSchema.plugin(passportLocalMongoose);
 
-module.exports=mongoose.model("User",userSchema);
+module.exports=wanderlust.model("User",userSchema);
