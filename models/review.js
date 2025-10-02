@@ -1,6 +1,6 @@
 const mongoose=require("mongoose");
 const {Schema}=mongoose;
-
+const wanderlustDB = mongoose.connection.useDb('wanderlust');
 
 const reviewSchema=new Schema({
     comment:String,
@@ -19,4 +19,4 @@ const reviewSchema=new Schema({
     }
 });
 
-module.exports=mongoose.model("Review",reviewSchema);
+module.exports=wanderlustDB.model("Review",reviewSchema);
