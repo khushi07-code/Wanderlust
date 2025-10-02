@@ -1,7 +1,7 @@
 const mongoose=require("mongoose");
 const { Schema }=mongoose;
 const Review=require("./review.js");
-const { number } = require("joi");
+const wanderlustDB = mongoose.connection.useDb('wanderlust');
 
 const listingSchema= new mongoose.Schema({
     title:{
@@ -72,5 +72,5 @@ listingSchema.post('findOneAndDelete',async(listing)=>{
 })
 
 
-const Listing=mongoose.model("Listing",listingSchema);
+const Listing=wanderlustDB.model("Listing",listingSchema);
 module.exports=Listing;
