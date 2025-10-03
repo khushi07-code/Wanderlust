@@ -40,11 +40,6 @@ main().then((res)=>{
     console.log(err);
 });
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 7ad04cd0f502f55bc86e40bca3c83266df0203ea
 const store=MongoStore.create({
     mongoUrl:dburl,
     crypto: {
@@ -72,11 +67,7 @@ passport.use( new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 7ad04cd0f502f55bc86e40bca3c83266df0203ea
 //middleware for flash
 app.use((req,res,next)=>{
     res.locals.success=req.flash("success");
