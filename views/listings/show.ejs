@@ -15,8 +15,7 @@
                     <p>Owned by <i><%=listing.owner.username%></i></p>
                     <p><%=listing.description%> </p>
                     <p>&#8377;<%=listing.price.toLocaleString("en-IN")%></p>
-                    <p><%=listing.location%></p>
-                    <p><%=listing.country%> </p>
+                    <p><%=listing.location.city%>,<%=listing.location.state%>,<%=listing.location.country%></p>
                 </p>
             </div>
         </div>

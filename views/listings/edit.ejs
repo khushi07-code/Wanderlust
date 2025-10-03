@@ -28,12 +28,20 @@
                     </div>  
                     <div class="mb-3 col-md-8">
                         <label for="country" class="form-label">country</label>
-                        <input to="country" name="listing[country]" value="<%= listing.country %>"  type="text" class="form-control"  required>
+                        <input to="country" name="listing[location][country]" value="<%= listing.location.country %>"  type="text" class="form-control"  required>
                     </div>   
                 </div>
-                <div class="mb-3 " >
-                    <label for="location" class="form-label">Location</label>
-                    <input to="location" name="listing[location]" value="<%= listing.location %>"  type="text" class="form-control"  required>
+                <div class="mb-3 col-md-6">
+                        <label for="city" class="form-label">City</label>
+                        <input id="city" name="listing[location][city]" value="<%=listing.location.city%>"  type="text" class="form-control"  required>
+                        <div class="invalid-feedback">city should be valid</div>
+                    </div> 
+
+                    <div class="mb-3 col-md-6">
+                        <label for="state" class="form-label">State</label>
+                        <input id="state" name="listing[location][state]" value="<%=listing.location.state%>"type="text" class="form-control"  required >
+                        <div class="invalid-feedback">state should be valid</div>
+                    </div>   
                 </div>
 
                 <button class="btn btn-dark edit-btn mt-3">Edit</button>

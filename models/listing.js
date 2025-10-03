@@ -28,12 +28,9 @@ const listingSchema= new mongoose.Schema({
         required:true
     },
     location:{
-        type:String,
-        required:true
-    },
-    country:{
-        type:String,
-        required:true
+        city:{type:String,require:true},
+        state:{type:String,required:true},
+        country:{type:String,default:"India",required:true}
     },
     reviews:[
         {
@@ -71,6 +68,6 @@ listingSchema.post('findOneAndDelete',async(listing)=>{
     }
 })
 
-
-const Listing=mongoose.model("Listing",listingSchema);
+const wanderlustDB=mongoose.connection.useDb("wanderlust");
+const Listing=wanderlustDB.model("Listing",listingSchema);
 module.exports=Listing;

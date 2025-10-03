@@ -18,5 +18,5 @@ const reviewSchema=new Schema({
         ref:"User"
     }
 });
-
-module.exports=mongoose.model("Review",reviewSchema);
+const wanderlustDB=mongoose.connection.useDb("wanderlust");
+module.exports=wanderlustDB.model("Review",reviewSchema);

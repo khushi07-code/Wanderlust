@@ -5,10 +5,13 @@ const geocodingClient = mbxGeocoding({ accessToken:`${map_token}` });
 
 
 
-
 module.exports.index=async(req,res)=>{
     let listings;
-    const { category } = req.query;
+    const { category,destination} = req.query;
+    if(destination && destination.trim!==""){
+        listings=await Listing.find({location:{city:destination}});
+        console.log(listings);
+    }
     if (category && category.trim() !== ""){
         listings=await Listing.find({category});
     }else{
@@ -23,7 +26,7 @@ module.exports.createNew=async(req,res,next)=>{
             query: req.body.listing.location,
             limit: 2
         }) .send()
-  
+    console.log(response.body);
     const url=req.file.path;
     const filename=req.file.filename;
     const listing=req.body.listing;

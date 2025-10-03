@@ -28,6 +28,18 @@ app.use(methodOverride("_method"));
 app.engine("ejs",ejsMate);
 app.use(express.static(path.join(__dirname,"/public")));
 
+
+const dburl=process.env.AltasDB;
+
+async function main(){
+    await mongoose.connect(dburl);
+}
+main().then((res)=>{
+    console.log("connected to DB");
+}).catch((err)=>{
+    console.log(err);
+});
+
 const store=MongoStore.create({
     mongoUrl:dburl,
     crypto: {
@@ -55,16 +67,6 @@ passport.use( new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-const dburl=process.env.AltasDB;
-
-async function main(){
-    await mongoose.connect(dburl);
-}
-main().then((res)=>{
-    console.log("connected to DB");
-}).catch((err)=>{
-    console.log(err);
-});
 
 
 //middleware for flash

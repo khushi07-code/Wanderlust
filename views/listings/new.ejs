@@ -57,15 +57,23 @@
 
                     <div class="mb-3 col-md-8">
                         <label for="country" class="form-label">country</label>
-                        <input id="country" name="listing[country]" placeholder="enter country"  type="text" class="form-control"  required >
+                        <input id="country" name="listing[location][country]" placeholder="enter country"  type="text" class="form-control"  required >
                         <div class="invalid-feedback">country should be valid</div>
                     </div>   
                 </div>
+                <div class="row">
 
-                <div class="mb-3" >
-                    <label for="location" class="form-label">Location</label>
-                    <input id="location" name="listing[location]" placeholder="enter location "  type="text" class="form-control"  required>
-                    <div class="invalid-feedback">Location should be valid</div>
+                <div class="mb-3 col-md-6">
+                        <label for="city" class="form-label">City</label>
+                        <input id="city" name="listing[location][city]" placeholder="City "  type="text" class="form-control"  required>
+                        <div class="invalid-feedback">Location should be valid</div>
+                    </div> 
+
+                    <div class="mb-3 col-md-6">
+                        <label for="state" class="form-label">State</label>
+                        <input id="state" name="listing[location][state]" placeholder="State"  type="text" class="form-control"  required >
+                        <div class="invalid-feedback">country should be valid</div>
+                    </div>   
                 </div>
 
                 <button class="btn btn-dark add-btn">add</button>
