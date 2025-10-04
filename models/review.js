@@ -1,9 +1,10 @@
 const mongoose=require("mongoose");
 const {Schema}=mongoose;
 const wanderlustDB = mongoose.connection.useDb('wanderlust');
+const User=require("./user.js");
 
 const reviewSchema=new Schema({
-    comment:String,
+    comment:{String},
     rating:{
         type:Number,
         min:1,

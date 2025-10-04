@@ -29,7 +29,7 @@ module.exports.isOwner=async (req,res,next)=>{
         req.flash("error","you are not the owner of this list");
         return res.redirect(`/listing/${id}`);
     }
-    next();
+    next(listing);
 };
 
 module.exports.validateReview=(req,res,next)=>{
@@ -65,12 +65,3 @@ module.exports.isReviewAuthor=async (req,res,next)=>{
     }
     next();
 };
-
-module.exports.isdestination=async(req,res,next)=>{
-    if(req.query.destination){
-        req.session.destination=req.query.destination
-    }else{
-        req.session.destination=""
-    }
-    next();
-}

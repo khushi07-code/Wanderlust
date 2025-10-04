@@ -13,7 +13,7 @@ main().then((res)=>{
 }).catch((err)=>{
     console.log(err,"err");
 })
-const adminId="";
+const adminId="68e0667fce65252ee1e938c8";
 
 async function initDB(){
     await Listing.deleteMany({});

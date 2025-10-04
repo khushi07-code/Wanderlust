@@ -31,7 +31,7 @@
         <hr>
         <div class="col-8 offset-3  mb-4">
             <h4> Leave a review</h4>
-            <form method="post" action="/listing/<%=listing.id%>/reviews" novalidate class="needs-validation">
+            <form method="post" action="/listing/<%=listing._id%>/reviews" novalidate class="needs-validation">
                 <div class="mb-3 mt-3">
                     <label for="rating" class="form-label">rating</label>
                     <fieldset class="starability-slot">
@@ -82,7 +82,6 @@
         <div class="col-8 offset-3">
             <h1>You'll be there</h1>
             <div id="map"></div>
-           
         </div>
     </div>
 </body>

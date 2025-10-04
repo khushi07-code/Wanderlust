@@ -1,32 +1,47 @@
 const Listing=require("../models/listing.js");
+const Review=require("../models/review.js");
 const mbxGeocoding = require('@mapbox/mapbox-sdk/services/geocoding');
 const map_token=process.env.MAP_TOKEN;
 const geocodingClient = mbxGeocoding({ accessToken:`${map_token}` });
-
-
+const User=require("../models/user.js");
+const { isdestination } = require("../utils/middleware.js");
 
 module.exports.index=async(req,res)=>{
     let listings;
-    const { category,destination} = req.query;
-    if(destination && destination.trim!==""){
-        listings=await Listing.find({location:{city:destination}});
-        console.log(listings);
-    }
-    if (category && category.trim() !== ""){
-        listings=await Listing.find({category});
-    }else{
-        listings=await Listing.find({});
-    }
-    console.log(listings);
-    res.render("./listings/index.ejs",{listings});
+const { category, destination } = req.query;
+
+const filter = {};
+
+if(destination && destination.trim() !== "") {
+    const regex = new RegExp((destination.charAt(0).toUpperCase() + destination.slice(1)).trim(), "i");
+    filter.$or = [
+        { "location.city": regex },
+        { "location.state": regex },
+        { "location.country": regex }
+    ];
+    res.locals.filterquery.destination=destination;
+}
+if (category && category.trim() !== "") {
+    filter.category = category.trim();
+}
+console.log(req.query);
+console.log(filter);
+listings = await Listing.find(filter);
+res.render("./listings/index.ejs", { listings });
+
 };
 
 module.exports.createNew=async(req,res,next)=>{
+    const { city, state, country } = req.body.listing.location;
+
+// Join into a single query string for Mapbox
+    const locationQuery = `${city}, ${state}, ${country}`;
+
     const response=await geocodingClient.forwardGeocode({
-            query: req.body.listing.location,
+            query: locationQuery,
             limit: 2
         }) .send()
-    console.log(response.body);
+
     const url=req.file.path;
     const filename=req.file.filename;
     const listing=req.body.listing;
@@ -65,6 +80,8 @@ module.exports.update=async(req,res)=>{
 
 module.exports.deleteList=async(req,res)=>{
     let {id}=req.params;
+    console.log(req);
+    
     await Listing.findByIdAndDelete(id);
     req.flash("success","listing deleted!");
     res.redirect("/listing");
@@ -72,12 +89,29 @@ module.exports.deleteList=async(req,res)=>{
 
 module.exports.show=async(req,res)=>{
     let {id}=req.params;
-    const listing=await Listing.findById(id).populate({path:'reviews',populate:{path:"author"}}).populate("owner");
-    console.log(listing);
+   const listing = await Listing.findById(id).lean(); // Use .lean() to allow modifications
 
-    if(!listing){
-        req.flash("error","Listing you requested for does not exit!");
-        res.redirect("/listing");
-    }
+  if (!listing) {
+    req.flash("error", "Listing not found");
+    return res.redirect("/listing");
+  }
+
+  // Step 2: Fetch owner manually
+  const owner = await User.findById(listing.owner).lean();
+  listing.owner = owner;
+
+  // Step 3: Fetch reviews manually
+  const reviews = await Review.find({ _id: { $in: listing.reviews } }).lean();
+
+  // Step 4: For each review, fetch its author manually
+  for (let review of reviews) {
+    const author = await User.findById(review.author).lean();
+    review.author = author;
+  }
+
+  // Step 5: Attach enriched reviews back to listing
+  listing.reviews = reviews;
+
+    console.log(listing,"hello");
     res.render("./listings/show.ejs",{listing});
 };

@@ -45,73 +45,73 @@
     <!-- filter ui -->
     <div id="filters">
         <div class="filter">
-            <a href="/listing?category=trending">
+            <a href="/listing?category=trending<%= filterquery.destination ? `&destination=${filterquery.destination}` : '' %>">
                 <div><i class="fa-solid fa-fire"></i></div>
                 <p>Trending</p>
             </a>
         </div>
         <div class="filter">
-            <a href="/listing?category=room">
+            <a href="/listing?category=room<%= filterquery.destination ? `&destination=${filterquery.destination}` : '' %>">
                 <div><i class="fa-solid fa-bed"></i></div>
                 <p>Rooms</p>
             </a> 
         </div>
         <div class="filter">
-            <a href="/listing?category=iconis city">
+            <a href="/listing?category=iconis city<%= filterquery.destination ? `&destination=${filterquery.destination}` : '' %>">
                 <div><i class="fa-solid fa-city"></i></div>
                 <p>Iconis Cities</p>
             </a>
         </div>
         <div class="filter">
-            <a href="/listing?category=castle">
+            <a href="/listing?category=castle<%= filterquery.destination ? `&destination=${filterquery.destination}` : '' %>">
                 <div><i class="fa-brands fa-fort-awesome"></i></div>
                 <p>castles</p>
             </a>
         </div>
         <div class="filter">
-            <a href="/listing?category=amazing pool">
+            <a href="/listing?category=amazing pool<%= filterquery.destination ? `&destination=${filterquery.destination}` : '' %>">
                 <div><i class="fa-solid fa-person-swimming"></i></div>
                 <p>Amazing pools</p>
             </a>
         </div>
         <div class="filter  d-sm-none d-md-none d-lg-block ">
-            <a href="/listing?category=amazing view">
+            <a href="/listing?category=amazing view<%= filterquery.destination ? `&destination=${filterquery.destination}` : '' %>">
                 <div><i class="fa-solid fa-sun-plant-wilt"></i></div>
                 <p>Amazing views</p>
             </a>
         </div>
         <div class="filter  d-sm-none d-md-none d-lg-block ">
-            <a href="/listing?category=mountain">
+            <a href="/listing?category=mountain<%= filterquery.destination ? `&destination=${filterquery.destination}` : '' %>">
                 <div><i class="fa-solid fa-mountain"></i></div>
                 <p>Mountain</p>
             </a>
         </div>
         <div class="filter d-sm-none d-md-none d-lg-block">
-            <a href="/listing?category=camp">
+            <a href="/listing?category=camp<%= filterquery.destination ? `&destination=${filterquery.destination}` : '' %>">
                 <div><i class="fa-solid fa-campground"></i></div>
                 <p>camping</p>
             </a>
         </div>
         <div class="filter d-sm-none  d-md-none d-lg-block">
-            <a href="/listing?category=farm">
+            <a href="/listing?category=farm<%= filterquery.destination ? `&destination=${filterquery.destination}` : '' %>">
                 <div><i class="fa-solid fa-cow"></i></div>
                 <p>Farms</p>
             </a>
         </div>
         <div class="filter  d-sm-none  d-md-none d-lg-block">
-            <a href="/listing?category=arctic">
+            <a href="/listing?category=arctic<%= filterquery.destination ? `&destination=${filterquery.destination}` : '' %>">
                 <div><i class="fa-solid fa-snowflake"></i></div>
                 <p>Arctic</p>
             </a>
         </div>
         <div class="filter  d-sm-none  d-md-none d-lg-block">
-            <a href="/listing?category=boat">
+            <a href="/listing?category=boat<%= filterquery.destination ? `&destination=${filterquery.destination}` : '' %>">
                 <div><i class="fa-solid fa-ship"></i></div>
                 <p>Boats</p>
             </a>
         </div>
           <div class="filter  d-sm-none  d-md-none d-lg-block">
-            <a href="/listing?category=dom">
+            <a href="/listing?category=dom<%= filterquery.destination ? `&destination=${filterquery.destination}` : '' %>">
                 <div><i class="fa-solid fa-igloo"></i></div>
                 <p>Doms</p>
             </a>

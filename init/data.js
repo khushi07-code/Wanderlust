@@ -16,7 +16,7 @@ const sampleListings = [
     title: "Historic Castle in Scotland",
     description: "Live like royalty in this 16th-century fortress.",
     image: {
-      url: "https://images.unsplash.com/photo-1601234567890-34944fa0be68?auto=format&fit=crop&w=800&q=80",
+      url: "https://images.unsplash.com/photo-1549887534-4b7e1f3a5f4b?auto=format&fit=crop&w=800&q=80",
       filename: "scotland-castle.jpg"
     },
     price: 4000,
@@ -29,7 +29,7 @@ const sampleListings = [
     title: "Luxury Villa in the Maldives",
     description: "Overwater villa with private pool and ocean views.",
     image: {
-      url: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=80",
+      url: "https://images.unsplash.com/photo-1560347876-aeef00ee58a1?auto=format&fit=crop&w=800&q=80",
       filename: "maldives-villa.jpg"
     },
     price: 6000,
@@ -42,7 +42,7 @@ const sampleListings = [
     title: "Rustic Cabin in Montana",
     description: "A peaceful retreat surrounded by pine forests.",
     image: {
-      url: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
+      url: "https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=800&q=80",
       filename: "montana-cabin.jpg"
     },
     price: 1100,
@@ -120,7 +120,7 @@ const sampleListings = [
     title: "Mountain View Chalet",
     description: "Panoramic views of snow-capped peaks.",
     image: {
-      url: "https://images.unsplash.com/photo-1533106418989-88406c7cc8e1?auto=format&fit=crop&w=800&q=80",
+      url: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
       filename: "mountain-chalet.jpg"
     },
     price: 2800,
@@ -198,7 +198,7 @@ const sampleListings = [
     title: "Luxury Poolside Villa",
     description: "Infinity pool with sunset views.",
     image: {
-      url: "https://images.unsplash.com/photo-1558980664-10e7170c0f4b?auto=format&fit=crop&w=800&q=80",
+      url: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=80",
       filename: "poolside-villa.jpg"
     },
     price: 5200,
@@ -224,7 +224,7 @@ const sampleListings = [
     title: "Historic Dome in Rome",
     description: "Stay inside a restored Roman dome.",
     image: {
-      url: "https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=800&q=80",
+      url: "https://images.unsplash.com/photo-1549887534-4b7e1f3a5f4b?auto=format&fit=crop&w=800&q=80",
       filename: "rome-dome.jpg"
     },
     price: 4500,
@@ -237,7 +237,7 @@ const sampleListings = [
     title: "Trendy Studio in Berlin",
     description: "Minimalist design in the heart of the city.",
     image: {
-      url: "https://images.unsplash.com/photo-1549887534-4b7e1f3a5f4b?auto=format&fit=crop&w=800&q=80",
+      url: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
       filename: "berlin-studio.jpg"
     },
     price: 1900,
@@ -250,7 +250,7 @@ const sampleListings = [
     title: "Countryside Room in Ireland",
     description: "Peaceful room with rolling green hills.",
     image: {
-      url: "https://images.unsplash.com/photo-1571501679680-de32f1e7aad4?auto=format&fit=crop&w=800&q=80",
+      url: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80",
       filename: "ireland-room.jpg"
     },
     price: 1400,
@@ -263,7 +263,7 @@ const sampleListings = [
     title: "Castle Tower Suite",
     description: "Stay in a medieval tower with panoramic views.",
     image: {
-      url: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+      url: "https://images.unsplash.com/photo-1601234567890-34944fa0be68?auto=format&fit=crop&w=800&q=80",
       filename: "tower-suite.jpg"
     },
     price: 3900,
@@ -276,7 +276,7 @@ const sampleListings = [
     title: "Lakefront Camp in Canada",
     description: "Tent camping with lake access and fire pits.",
     image: {
-      url: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=80",
+      url: "https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=800&q=80",
       filename: "canada-camp.jpg"
     },
     price: 800,
@@ -289,11 +289,11 @@ const sampleListings = [
     title: "Iconic City Loft in Paris",
     description: "Chic loft near the Eiffel Tower.",
     image: {
-      url: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+      url: "https://images.unsplash.com/photo-1588854337118-1c1d5f3f6f3e?auto=format&fit=crop&w=800&q=80",
       filename: "paris-loft.jpg"
     },
     price: 3300,
-    location: { city: "Paris", state: "Île-de-France", country: "France" },
+    location: { city: "Paris", state: "Île‑de‑France", country: "France" },
     reviews: [],
     geometry: { type: "Point", coordinates: [2.3522, 48.8566] },
     category: "iconic city"
@@ -302,7 +302,7 @@ const sampleListings = [
     title: "Farm Stay in Rajasthan",
     description: "Experience rural life with local cuisine.",
     image: {
-      url: "https://images.unsplash.com/photo-1606788075761-5b9b3c2f3f3e?auto=format&fit=crop&w=800&q=80",
+      url: "https://images.unsplash.com/photo-1558980664-10e7170c0f4b?auto=format&fit=crop&w=800&q=80",
       filename: "rajasthan-farm.jpg"
     },
     price: 1100,
@@ -315,7 +315,7 @@ const sampleListings = [
     title: "Trending Studio in Seoul",
     description: "Compact and stylish with smart tech.",
     image: {
-      url: "https://images.unsplash.com/photo-1588854337118-1c1d5f3f6f3e?auto=format&fit=crop&w=800&q=80",
+      url: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
       filename: "seoul-studio.jpg"
     },
     price: 2100,
@@ -328,7 +328,7 @@ const sampleListings = [
     title: "Poolside Bungalow in Phuket",
     description: "Private pool and tropical garden.",
     image: {
-      url: "https://images.unsplash.com/photo-1549887534-4b7e1f3a5f4b?auto=format&fit=crop&w=800&q=80",
+      url: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=80",
       filename: "phuket-bungalow.jpg"
     },
     price: 2900,
@@ -336,9 +336,165 @@ const sampleListings = [
     reviews: [],
     geometry: { type: "Point", coordinates: [98.3381, 7.8804] },
     category: "amazing pool"
+  },
+  {
+    title: "Mountain Cabin in Colorado",
+    description: "Woodsy charm with hiking trails nearby.",
+    image: {
+      url: "https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=800&q=80",
+      filename: "colorado-cabin.jpg"
+    },
+    price: 1700,
+    location: { city: "Denver", state: "Colorado", country: "USA" },
+    reviews: [],
+    geometry: { type: "Point", coordinates: [-104.9903, 39.7392] },
+    category: "mountain"
+  },
+  {
+    title: "Room with a View in Sydney",
+    description: "Harbor views and modern design.",
+    image: {
+      url: "https://images.unsplash.com/photo-1549887534-4b7e1f3a5f4b?auto=format&fit=crop&w=800&q=80",
+      filename: "sydney-room.jpg"
+    },
+    price: 2600,
+    location: { city: "Sydney", state: "NSW", country: "Australia" },
+    reviews: [],
+    geometry: { type: "Point", coordinates: [151.2093, -33.8688] },
+    category: "room"
+  },
+  {
+    title: "Seaside Bungalow in Bali",
+    description: "Charming bungalow with ocean breeze and tropical vibes.",
+    image: {
+      url: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+      filename: "bali-bungalow.jpg"
+    },
+    price: 1800,
+    location: { city: "Seminyak", state: "Bali", country: "Indonesia" },
+    reviews: [],
+    geometry: { type: "Point", coordinates: [115.1686, -8.6919] },
+    category: "amazing view"
+  },
+  {
+    title: "Chic Apartment in San Francisco",
+    description: "Modern apartment near the Golden Gate Bridge.",
+    image: {
+      url: "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=800&q=80",
+      filename: "sf-apartment.jpg"
+    },
+    price: 3500,
+    location: { city: "San Francisco", state: "California", country: "USA" },
+    reviews: [],
+    geometry: { type: "Point", coordinates: [-122.4194, 37.7749] },
+    category: "iconic city"
+  },
+  {
+    title: "Countryside Cottage in Tuscany",
+    description: "Cozy cottage surrounded by vineyards and olive groves.",
+    image: {
+      url: "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=800&q=80",
+      filename: "tuscany-cottage.jpg"
+    },
+    price: 2100,
+    location: { city: "Florence", state: "Tuscany", country: "Italy" },
+    reviews: [],
+    geometry: { type: "Point", coordinates: [11.2558, 43.7696] },
+    category: "farm"
+  },
+  {
+    title: "Urban Studio in Hong Kong",
+    description: "Compact studio with city skyline views.",
+    image: {
+      url: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80",
+      filename: "hongkong-studio.jpg"
+    },
+    price: 2200,
+    location: { city: "Hong Kong", state: "Hong Kong", country: "China" },
+    reviews: [],
+    geometry: { type: "Point", coordinates: [114.1095, 22.3964] },
+    category: "trending"
+  },
+  {
+    title: "Romantic Cabin in Vermont",
+    description: "Cozy fireplace and snow-covered scenery.",
+    image: {
+      url: "https://images.unsplash.com/photo-1519682577862-22b62b24e493?auto=format&fit=crop&w=800&q=80",
+      filename: "vermont-cabin.jpg"
+    },
+    price: 1300,
+    location: { city: "Stowe", state: "Vermont", country: "USA" },
+    reviews: [],
+    geometry: { type: "Point", coordinates: [-72.6861, 44.4654] },
+    category: "camp"
+  },
+  {
+    title: "Eco Dome in Costa Rica",
+    description: "Sustainable dome surrounded by rainforest.",
+    image: {
+      url: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
+      filename: "costa-rica-dome.jpg"
+    },
+    price: 2500,
+    location: { city: "Tamarindo", state: "Guanacaste", country: "Costa Rica" },
+    reviews: [],
+    geometry: { type: "Point", coordinates: [-85.8478, 10.2996] },
+    category: "dom"
+  },
+  {
+    title: "Minimalist Apartment in Amsterdam",
+    description: "Bright and airy with canal views.",
+    image: {
+      url: "https://images.unsplash.com/photo-1472220625704-91e1462799b2?auto=format&fit=crop&w=800&q=80",
+      filename: "amsterdam-apartment.jpg"
+    },
+    price: 2700,
+    location: { city: "Amsterdam", state: "North Holland", country: "Netherlands" },
+    reviews: [],
+    geometry: { type: "Point", coordinates: [4.9041, 52.3676] },
+    category: "iconic city"
+  },
+  {
+    title: "Tropical Treehouse in Costa Rica",
+    description: "Adventure and tranquility in the treetops.",
+    image: {
+      url: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=800&q=80",
+      filename: "costa-rica-treehouse.jpg"
+    },
+    price: 1600,
+    location: { city: "Monteverde", state: "Puntarenas", country: "Costa Rica" },
+    reviews: [],
+    geometry: { type: "Point", coordinates: [-85.3000, 10.3000] },
+    category: "farm"
+  },
+  {
+    title: "City Loft in Chicago",
+    description: "Spacious loft with modern amenities and lake views.",
+    image: {
+      url: "https://images.unsplash.com/photo-1501183638714-2f6bb412c8ce?auto=format&fit=crop&w=800&q=80",
+      filename: "chicago-loft.jpg"
+    },
+    price: 2900,
+    location: { city: "Chicago", state: "Illinois", country: "USA" },
+    reviews: [],
+    geometry: { type: "Point", coordinates: [-87.6298, 41.8781] },
+    category: "iconic city"
+  },
+  {
+    title: "Lake Cabin in New Zealand",
+    description: "Secluded cabin with stunning lake views.",
+    image: {
+      url: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
+      filename: "nz-lake-cabin.jpg"
+    },
+    price: 2000,
+    location: { city: "Queenstown", state: "Otago", country: "New Zealand" },
+    reviews: [],
+    geometry: { type: "Point", coordinates: [168.6626, -45.0312] },
+    category: "camp"
   }
+];
 
-]
 
 
 module.exports = { data: sampleListings };
