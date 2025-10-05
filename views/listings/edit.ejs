@@ -7,31 +7,53 @@
             <form method="post" action="/listing/<%=listing._id%>?_method=PUT" novalidate class="needs-validation" enctype="multipart/form-data">
                 <div class="mb-3"> 
                     <label for="title" class="form-label">Title</label>
-                    <input to="title" name="listing[title]" value="<%= listing.title %>" type="text" class="form-control" required>
+                    <input id="title" name="listing[title]" value="<%= listing.title %>" type="text" class="form-control" required>
                 </div>
                 <div class="mb-3">
                     <label for="description" class="form-label">Description</label>
-                    <textarea to="description" name="listing[description]"  type="text" class="form-control"  required><%= listing.description %></textarea>
+                    <textarea id="description" name="listing[description]"  type="text" class="form-control"  required><%= listing.description %></textarea>
                 </div>
+                <div class="mb-3">
+                    <label class="form-label">Category</label>
+                        <div class="input-group mb-3">
+                            <select class="form-select" id="inputGroupSelect01" name="listing[category]">
+                                    <option disabled selected>Choose...</option>
+                                    <option value="amazing pool" <%= listing.category === "amazing pool" ? "selected" : "" %>>Amazing pool</option>
+                                    <option value="amazing view" <%= listing.category === "amazing view" ? "selected" : "" %>>Amazing view</option>
+                                    <option value="arctic" <%= listing.category === "arctic" ? "selected" : "" %>>Arctic</option>
+                                    <option value="boat" <%= listing.category === "boat" ? "selected" : "" %>>Boat</option>
+                                    <option value="camp" <%= listing.category === "camp" ? "selected" : "" %>>Camp</option>
+                                    <option value="castle" <%= listing.category === "castle" ? "selected" : "" %>>Castle</option>
+                                    <option value="dom" <%= listing.category === "dom" ? "selected" : "" %>>Dom</option>
+                                    <option value="farm" <%= listing.category === "farm" ? "selected" : "" %>>Farm</option>
+                                    <option value="iconic city" <%= listing.category === "iconic city" ? "selected" : "" %>>Iconic city</option>
+                                    <option value="mountain" <%= listing.category === "mountain" ? "selected" : "" %>>Mountain</option>
+                                    <option value="room" <%= listing.category === "room" ? "selected" : "" %>>Room</option>
+                            </select>
+                        </div>
+                </div>
+
+                      
                 <div class="mb-3">
                     <label class="form-label">Original Listing Image</label><br>
                     <img src="<%= originalImage%>" alt="">
                 </div>
                 <div class="mb-3">
                     <label for="image" class="form-label">Upload New Image</label>
-                    <input to="image" name="listing[image][url]"   type="file" class="form-control"  required>
+                    <input id="image" name="listing[image][url]"  type="file" class="form-control" >
                 </div>
                 <div class="row">
                     <div class="mb-3 col-md-4">
                         <label for="price" class="form-label">Price</label>
-                        <input to="price" name="listing[price]" value="<%= listing.price %>"  type="number" class="form-control"  required>
+                        <input id="price" name="listing[price]" value="<%= listing.price %>"  type="number" class="form-control"  required>
                     </div>  
                     <div class="mb-3 col-md-8">
                         <label for="country" class="form-label">country</label>
-                        <input to="country" name="listing[location][country]" value="<%= listing.location.country %>"  type="text" class="form-control"  required>
+                        <input id="country" name="listing[location][country]" value="<%= listing.location.country %>"  type="text" class="form-control"  required>
                     </div>   
                 </div>
-                <div class="mb-3 col-md-6">
+                <div class="row">
+                    <div class="mb-3 col-md-6">
                         <label for="city" class="form-label">City</label>
                         <input id="city" name="listing[location][city]" value="<%=listing.location.city%>"  type="text" class="form-control"  required>
                         <div class="invalid-feedback">city should be valid</div>
@@ -41,12 +63,11 @@
                         <label for="state" class="form-label">State</label>
                         <input id="state" name="listing[location][state]" value="<%=listing.location.state%>"type="text" class="form-control"  required >
                         <div class="invalid-feedback">state should be valid</div>
-                    </div>   
+                    </div>  
                 </div>
-
-                <button class="btn btn-dark edit-btn mt-3">Edit</button>
+                <button class="btn btn-dark edit-btn mt-3 col-3 offset-4">Edit</button>
             </form>
             <br><br>
-        </div>
+         </div> 
     </div>
 </body>
